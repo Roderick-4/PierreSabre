@@ -2,13 +2,13 @@ package personnages;
 
 public class Humain {
 	private String nom;
-	private String boisson_fav;
-	private int quantite_argent;
+	private String boissonFav;
+	private int quantiteArgent;
 	
-	public Humain(String nom, String boisson_fav, int quantite_argent) {
+	public Humain(String nom, String boissonFav, int quantiteArgent) {
 		this.nom = nom;
-		this.boisson_fav = boisson_fav;
-		this.quantite_argent = quantite_argent;
+		this.boissonFav = boissonFav;
+		this.quantiteArgent = quantiteArgent;
 	}
 	
 	public String getNom() {

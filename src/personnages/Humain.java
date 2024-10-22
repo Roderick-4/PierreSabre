@@ -16,11 +16,11 @@ public class Humain {
 	}
 	
 	public String getBoissonFav() {
-		return boisson_fav;
+		return boissonFav;
 	}
 	
 	public int getQuantiteArgent() {
-		return quantite_argent;
+		return quantiteArgent;
 	}
 	
 	private String parler() {
@@ -28,28 +28,28 @@ public class Humain {
 	}
 	
 	public void direBonjour() {
-		System.out.println(parler() + "Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boisson_fav);;
+		System.out.println(parler() + "Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonFav);;
 	}
 	
 	public void boire() {
-		System.out.println(parler() + "Mmmm, un bon verre de " + boisson_fav + " ! GLOUPS !");
+		System.out.println(parler() + "Mmmm, un bon verre de " + boissonFav + " ! GLOUPS !");
 	}
 	
 	public void acheter(String bien, int prix) {
-		if (prix > quantite_argent) {
-			System.out.println(parler() + "Je n'ai plus que " + quantite_argent + " sous en poche. Je ne peux même pas m'offrir " + bien + " à " + prix + " sous.");
+		if (prix > quantiteArgent) {
+			System.out.println(parler() + "Je n'ai plus que " + quantiteArgent + " sous en poche. Je ne peux même pas m'offrir " + bien + " à " + prix + " sous.");
 		} else {
-			System.out.println(parler() + "J'ai " + quantite_argent + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous");
+			System.out.println(parler() + "J'ai " + quantiteArgent + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous");
 			perdreArgent(prix);
 			
 		}
 	}
 	
-	public void gagnerArgent(int gain) {
-		quantite_argent += gain;
+	protected void gagnerArgent(int gain) {
+		quantiteArgent += gain;
 	}
 	
-	public void perdreArgent(int perte) {
-		quantite_argent -= perte;
+	protected void perdreArgent(int perte) {
+		quantiteArgent -= perte;
 	}
 }

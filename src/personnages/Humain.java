@@ -4,6 +4,8 @@ public class Humain {
 	protected String nom;
 	protected String boisson;
 	private int argent;
+	private int nbConnaissance = 0;
+	private Humain[] connaissance = new Humain [30];
 
 	public Humain(String nom, String boissonFav, int argent) {
 		this.nom = nom;
@@ -55,7 +57,7 @@ public class Humain {
 	
 	public void faireConnaissanceAvec(Humain autreHumain) {
 		direBonjour();
-		autreHumain.repondre(null);
+		autreHumain.repondre(this);
 		memoriser(autreHumain);
 	}
 	
@@ -65,7 +67,7 @@ public class Humain {
 	}
 
 	private void memoriser(Humain humain) {
-		// TODO Auto-generated method stub
-		
+		nbConnaissance ++;
+		connaissance [nbConnaissance] = humain;
 	}
 }
